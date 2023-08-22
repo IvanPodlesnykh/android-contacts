@@ -9,14 +9,14 @@ public class FilterContactTypeUi implements ListDiffInterface<FilterContactTypeU
     private final FilterContactType contactType;
     private final boolean selected;
 
-    @Override
-    public boolean theSameAs(FilterContactTypeUi filterContactTypeUi) {
-        return this.getContactType() == filterContactTypeUi.getContactType();
-    }
-
     public FilterContactTypeUi(@NonNull FilterContactType contactType, boolean selected) {
         this.contactType = contactType;
         this.selected = selected;
+    }
+
+    @Override
+    public boolean theSameAs(FilterContactTypeUi filterContactTypeUi) {
+        return this.getContactType() == filterContactTypeUi.getContactType();
     }
 
     public FilterContactType getContactType() {
